@@ -192,7 +192,7 @@ body {
     max-width: 600px;
     width: 94%;
     z-index: 61;
-    box-shadow: 0 12px 30px rgba(0,0,0,0,0.25)
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25)
 }
 .modal-close {
     position: absolute;

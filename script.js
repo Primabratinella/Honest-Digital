@@ -20,6 +20,30 @@
 
     let lastFocused = null;
 
+    function handleKeyDown (e) {
+        if (e.key === 'Escape'){
+            closeModal ();
+            return;
+        }
+
+        if (e.key === 'Tab') {
+            const focusable = modalPanel.querySelectorAll
+            ('a[href],button:not([disabled]), input:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+                );
+            if (!focusable.length)return;
+            const first = focusable [0];
+            const last = focus[focusable.length -1];
+
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last){
+                e.preventDefault();
+                first.focus();
+            }
+        }
+    }
+
     function openModal () {
         if (!modal || !modalPanel || !backdrop) return;
         lastFocused = document.activeElement;
@@ -50,22 +74,7 @@
             if (e.key === 'Escape')
                 closeModal();
             return;
-            if (e.key === 'Tab') {
-                const focusable = modalPanel.querySelectorAll
-                ('a[href],button:not([disabled]), input:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-                    );
-                if (!focusable.length)return;
-                const first = focusable [0];
-                const last = focus[focusable.length -1];
-
-                if (e.shiftKey && document.activeElement === first) {
-                    e.preventDefault();
-                    last.focus();
-                } else if (!e.shiftKey && document.activeElement === last){
-                    e.preventDefault();
-                    first.focus();
-                }
-            }
+            
         }
         if (details) details.addEventListener('click', openModal);
         if(modalClose) modalClose.addEventListener('click', closeModal);
