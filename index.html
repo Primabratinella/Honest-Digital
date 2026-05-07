@@ -28,13 +28,13 @@
         </nav>
 
         <button id="mobile-toggle" 
-        class="mobile-toggle" 
-        aria-expanded="false" 
-        aria-controls="mobile-nav"
+            class="mobile-toggle" 
+            aria-expanded="false" 
+            aria-controls="mobile-nav"
         > Menu </button>
     </div>
 
-        <div id="mobile-nav" class="mobile-nav" hidden>
+        <div id="mobile-nav" class="mobile-nav" hidden aria-hidden="'true">
             <ul>
                 <li>
                     <a href="#"> Offers </a>
@@ -57,12 +57,14 @@
 
         <div class="hero-panel">
             <h1 class="model-title"> Nautilus </h1>
-            <div class="offer-badges">
-                <div class="badge"><span class="price"> $469 </span><small>/mo</small></div>
-                <div class="badge"><span> 36</span><small> mo</small></div>
-                <div class="badge"><span> $2,724</span><small> due at signing</small> </div>
+            <div class="offer-badges" role="list">
+                <div class="badge" role="listitem"><span class="price"> $469 </span><small>/mo</small>
+                </div>
+                <div class="badge" role="listitem"><span> 36</span><small> mo</small></div>
+                <div class="badge" role="listitem"><span> $2,724</span><small> due at signing</small>
+                </div>
             </div>
-            <button id="offer-details" class="btn btn-primary"> OFFER DETAILS </button>
+            <button id="offer-details" class="btn btn-primary" aria-haspopup="dialog" aria-controls="modals"> OFFER DETAILS </button>
         </div>
     </section>
 
@@ -88,7 +90,7 @@
 
     <aside class="sidebar"> 
         <div class="card">
-            <img src="src/assets/thumbnail.jpg"/>
+            <img src="src/assets/thumbnail.jpg" alt="Nautilus thumbnail" width="300" height="200"/>
             <div class="card-body">
                 <h4> Nautilus </h4>
             <p class="mini-offer"><strong> $469/mo</strong> • 36 mo • $2,724 due at signing
@@ -117,10 +119,12 @@
         </button>
     <h2 id="modal-title" Offer Details>
     </h2>
-    <p> Lease Offer:</strong> $469/mo for 36 months. $2,724 due at signing/ Mileage limits and charges apply for excess miles. </p>
+    <p> <strong>Lease Offer:</strong> $469/mo for 36 months. $2,724 due at signing/ Mileage limits and charges apply for excess miles. </p>
     <p><strong>Eliibility:</strong> For well-qualified buyers through participating dealers. </p>
+    
     <button id="modal-ok" class="btn"> Close </button>
     </div>
+    <div id="modal-backdrop" class="modal-backdrop" aria-hidden="true"></div>
 </div>
 
 
