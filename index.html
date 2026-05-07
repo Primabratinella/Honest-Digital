@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lincol Nautilus - Specials </title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="src/assets/logo.jpg" alt="Brand logo" class="logo"/>
+            </div>
+        
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li>
+                    <a href="#"> Offers </a>
+                </li>
+                <li>
+                    <a href="#"> Inventory </a>
+                </li>
+                <li>
+                    <a href="#"> Contact </a>
+                </li>
+            </ul>
+        </nav>
+
+        <button id="mobile-toggle" 
+        class="mobile-toggle" 
+        aria-expanded="false" 
+        aria-controls="mobile-nav"
+        > Menu </button>
+    </div>
+
+        <div id="mobile-nav" class="mobile-nav" hidden>
+            <ul>
+                <li>
+                    <a href="#"> Offers </a>
+                </li>
+                <li>
+                    <a href="#"> Inventory </a>
+                </li>
+                <li>
+                    <a href="#"> Contact </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container page">
+    <section class="hero">
+        <div class="hero-media">
+            <img id="hero-image" src="src/assets/hero-wide.jpg" alt="Lincoln Nautilus on coastal road"/>
+        </div>
+
+        <div class="hero-panel">
+            <h1 class="model-title"> Nautilus </h1>
+            <div class="offer-badges">
+                <div class="badge"><span class="price"> $469 </span><small>/mo</small></div>
+                <div class="badge"><span> 36</span><small> mo</small></div>
+                <div class="badge"><span> $2,724</span><small> due at signing</small> </div>
+            </div>
+            <button id="offer-details" class="btn btn-primary"> OFFER DETAILS </button>
+        </div>
+    </section>
+
+<section class="content-grid">
+<article class="main-copy">
+    <h2> Discover 2025 Lincoln Nautilus Deals </h2>
+    <p> Experience comfort and refined technology in the 2025 Nautilus. Below are current special offers and program details.</p>
+
+    <h3> Lease & Finance Offers </h3>
+    <p> Available to qualified lessees and buyers through participating dealers. Terms and conditions apply. </p>
+
+    <h3> Vehicle Highlights </h3>
+    <ul>
+        <li> Premium interior materials</li>
+        <li> Advanced driver assistance features </li>
+        <li> Available hybrid powertrain options </li>
+    </ul>
+
+    <h3> Important Disclosures </h3>
+    <p> The offers shown are for example only. See dealer for full details and availability.
+    </p>
+</article>
+
+    <aside class="sidebar"> 
+        <div class="card">
+            <img src="src/assets/thumbnail.jpg"/>
+            <div class="card-body">
+                <h4> Nautilus </h4>
+            <p class="mini-offer"><strong> $469/mo</strong> • 36 mo • $2,724 due at signing
+            </p> 
+        </div>
+        </div>
+
+     <div class=""disclaimer card>
+        <h5> Disclaimer</h5>
+        <p> All offers subject to credit approval, residency restrictions, and other terms. Vehicle may not be exactly as shown.
+        </p>
+    </aside>
+    </section>  
+</main>
+
+
+    <footer class="site-footer">
+        <div class="container"> 
+            <p> &copy;2025 Lincoln Dealer - Example </p>
+        </div>
+    </footer>
+
+<div id="modal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="modal-panel" role="document">
+        <button class="modal-close" id="modal-close" aria-label="Close modal"> &times;
+        </button>
+    <h2 id="modal-title" Offer Details>
+    </h2>
+    <p> Lease Offer:</strong> $469/mo for 36 months. $2,724 due at signing/ Mileage limits and charges apply for excess miles. </p>
+    <p><strong>Eliibility:</strong> For well-qualified buyers through participating dealers. </p>
+    <button id="modal-ok" class="btn"> Close </button>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
